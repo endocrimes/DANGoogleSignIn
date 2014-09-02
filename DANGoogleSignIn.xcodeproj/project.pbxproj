@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65C29A2619B6259200FEC6A4 /* DANGoogleSignIn.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65C29A2519B6259200FEC6A4 /* DANGoogleSignIn.h */; };
+		65C29A2819B6259200FEC6A4 /* DANGoogleSignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C29A2719B6259200FEC6A4 /* DANGoogleSignIn.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		65C29A2019B6259200FEC6A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				65C29A2619B6259200FEC6A4 /* DANGoogleSignIn.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		65C29A2219B6259200FEC6A4 /* libDANGoogleSignIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDANGoogleSignIn.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C29A2519B6259200FEC6A4 /* DANGoogleSignIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DANGoogleSignIn.h; sourceTree = "<group>"; };
+		65C29A2719B6259200FEC6A4 /* DANGoogleSignIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DANGoogleSignIn.m; sourceTree = "<group>"; };
+		65C29A2D19B6259200FEC6A4 /* DANGoogleSignInTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DANGoogleSignInTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C29A3019B6259200FEC6A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65C29A1F19B6259200FEC6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C29A2A19B6259200FEC6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65C29A1919B6259200FEC6A4 = {
+			isa = PBXGroup;
+			children = (
+				65C29A2419B6259200FEC6A4 /* DANGoogleSignIn */,
+				65C29A2E19B6259200FEC6A4 /* DANGoogleSignInTests */,
+				65C29A2319B6259200FEC6A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65C29A2319B6259200FEC6A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65C29A2219B6259200FEC6A4 /* libDANGoogleSignIn.a */,
+				65C29A2D19B6259200FEC6A4 /* DANGoogleSignInTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65C29A2419B6259200FEC6A4 /* DANGoogleSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				65C29A2519B6259200FEC6A4 /* DANGoogleSignIn.h */,
+				65C29A2719B6259200FEC6A4 /* DANGoogleSignIn.m */,
+			);
+			path = DANGoogleSignIn;
+			sourceTree = "<group>";
+		};
+		65C29A2E19B6259200FEC6A4 /* DANGoogleSignInTests */ = {
+			isa = PBXGroup;
+			children = (
+				65C29A2F19B6259200FEC6A4 /* Supporting Files */,
+			);
+			path = DANGoogleSignInTests;
+			sourceTree = "<group>";
+		};
+		65C29A2F19B6259200FEC6A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65C29A3019B6259200FEC6A4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65C29A2119B6259200FEC6A4 /* DANGoogleSignIn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C29A3319B6259200FEC6A4 /* Build configuration list for PBXNativeTarget "DANGoogleSignIn" */;
+			buildPhases = (
+				65C29A1E19B6259200FEC6A4 /* Sources */,
+				65C29A1F19B6259200FEC6A4 /* Frameworks */,
+				65C29A2019B6259200FEC6A4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DANGoogleSignIn;
+			productName = DANGoogleSignIn;
+			productReference = 65C29A2219B6259200FEC6A4 /* libDANGoogleSignIn.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		65C29A2C19B6259200FEC6A4 /* DANGoogleSignInTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C29A3619B6259200FEC6A4 /* Build configuration list for PBXNativeTarget "DANGoogleSignInTests" */;
+			buildPhases = (
+				65C29A2919B6259200FEC6A4 /* Sources */,
+				65C29A2A19B6259200FEC6A4 /* Frameworks */,
+				65C29A2B19B6259200FEC6A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DANGoogleSignInTests;
+			productName = DANGoogleSignInTests;
+			productReference = 65C29A2D19B6259200FEC6A4 /* DANGoogleSignInTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65C29A1A19B6259200FEC6A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Rocket Apps";
+				TargetAttributes = {
+					65C29A2119B6259200FEC6A4 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					65C29A2C19B6259200FEC6A4 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = 65C29A1D19B6259200FEC6A4 /* Build configuration list for PBXProject "DANGoogleSignIn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 65C29A1919B6259200FEC6A4;
+			productRefGroup = 65C29A2319B6259200FEC6A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65C29A2119B6259200FEC6A4 /* DANGoogleSignIn */,
+				65C29A2C19B6259200FEC6A4 /* DANGoogleSignInTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65C29A2B19B6259200FEC6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65C29A1E19B6259200FEC6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C29A2819B6259200FEC6A4 /* DANGoogleSignIn.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C29A2919B6259200FEC6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		65C29A3119B6259200FEC6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		65C29A3219B6259200FEC6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65C29A3419B6259200FEC6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		65C29A3519B6259200FEC6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		65C29A3719B6259200FEC6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DANGoogleSignInTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		65C29A3819B6259200FEC6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DANGoogleSignInTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65C29A1D19B6259200FEC6A4 /* Build configuration list for PBXProject "DANGoogleSignIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C29A3119B6259200FEC6A4 /* Debug */,
+				65C29A3219B6259200FEC6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65C29A3319B6259200FEC6A4 /* Build configuration list for PBXNativeTarget "DANGoogleSignIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C29A3419B6259200FEC6A4 /* Debug */,
+				65C29A3519B6259200FEC6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		65C29A3619B6259200FEC6A4 /* Build configuration list for PBXNativeTarget "DANGoogleSignInTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C29A3719B6259200FEC6A4 /* Debug */,
+				65C29A3819B6259200FEC6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65C29A1A19B6259200FEC6A4 /* Project object */;
+}
