@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		65C29A2619B6259200FEC6A4 /* DANGoogleSignIn.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65C29A2519B6259200FEC6A4 /* DANGoogleSignIn.h */; };
-		65C29A2819B6259200FEC6A4 /* DANGoogleSignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C29A2719B6259200FEC6A4 /* DANGoogleSignIn.m */; };
+		65C29A3B19B625D500FEC6A4 /* DANGoogleSignInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C29A3A19B625D500FEC6A4 /* DANGoogleSignInWebView.m */; };
+		65C29A4019B6263400FEC6A4 /* DANGoogleSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C29A3F19B6263400FEC6A4 /* DANGoogleSignInViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,9 +28,12 @@
 /* Begin PBXFileReference section */
 		65C29A2219B6259200FEC6A4 /* libDANGoogleSignIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDANGoogleSignIn.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C29A2519B6259200FEC6A4 /* DANGoogleSignIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DANGoogleSignIn.h; sourceTree = "<group>"; };
-		65C29A2719B6259200FEC6A4 /* DANGoogleSignIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DANGoogleSignIn.m; sourceTree = "<group>"; };
 		65C29A2D19B6259200FEC6A4 /* DANGoogleSignInTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DANGoogleSignInTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C29A3019B6259200FEC6A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65C29A3919B625D500FEC6A4 /* DANGoogleSignInWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DANGoogleSignInWebView.h; sourceTree = "<group>"; };
+		65C29A3A19B625D500FEC6A4 /* DANGoogleSignInWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DANGoogleSignInWebView.m; sourceTree = "<group>"; };
+		65C29A3E19B6263400FEC6A4 /* DANGoogleSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DANGoogleSignInViewController.h; sourceTree = "<group>"; };
+		65C29A3F19B6263400FEC6A4 /* DANGoogleSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DANGoogleSignInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				65C29A2519B6259200FEC6A4 /* DANGoogleSignIn.h */,
-				65C29A2719B6259200FEC6A4 /* DANGoogleSignIn.m */,
+				65C29A3D19B625E400FEC6A4 /* Controllers */,
+				65C29A3C19B625D800FEC6A4 /* Views */,
 			);
 			path = DANGoogleSignIn;
 			sourceTree = "<group>";
@@ -91,6 +96,24 @@
 				65C29A3019B6259200FEC6A4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65C29A3C19B625D800FEC6A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65C29A3919B625D500FEC6A4 /* DANGoogleSignInWebView.h */,
+				65C29A3A19B625D500FEC6A4 /* DANGoogleSignInWebView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		65C29A3D19B625E400FEC6A4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				65C29A3E19B6263400FEC6A4 /* DANGoogleSignInViewController.h */,
+				65C29A3F19B6263400FEC6A4 /* DANGoogleSignInViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65C29A2819B6259200FEC6A4 /* DANGoogleSignIn.m in Sources */,
+				65C29A3B19B625D500FEC6A4 /* DANGoogleSignInWebView.m in Sources */,
+				65C29A4019B6263400FEC6A4 /* DANGoogleSignInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +359,7 @@
 				65C29A3519B6259200FEC6A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65C29A3619B6259200FEC6A4 /* Build configuration list for PBXNativeTarget "DANGoogleSignInTests" */ = {
 			isa = XCConfigurationList;
@@ -343,6 +368,7 @@
 				65C29A3819B6259200FEC6A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
