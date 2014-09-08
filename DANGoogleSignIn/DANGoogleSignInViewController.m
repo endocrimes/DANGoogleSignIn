@@ -19,37 +19,17 @@ NSString * const DANGoogleSignInViewControllerRedirectUri = @"urn:ietf:wg:oauth:
 @implementation UIView (DANGSIWVCenterInSuperview)
 
 - (void)DANGSIWV_centerInSuperview {
-  // Leading
-  NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self
-                                                             attribute:NSLayoutAttributeLeading
-                                                             relatedBy:NSLayoutRelationEqual
-                                                                toItem:self.superview
-                                                             attribute:NSLayoutAttributeLeading
-                                                            multiplier:1
-                                                              constant:0];
-  NSLayoutConstraint *trailing = [NSLayoutConstraint constraintWithItem:self
-                                                              attribute:NSLayoutAttributeTrailing
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self.superview
-                                                              attribute:NSLayoutAttributeTrailing
-                                                             multiplier:1
-                                                               constant:0];
-  NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self
-                                                         attribute:NSLayoutAttributeTop
-                                                         relatedBy:NSLayoutRelationEqual
-                                                            toItem:self.superview
-                                                         attribute:NSLayoutAttributeTop
-                                                        multiplier:1
-                                                          constant:0];
-  NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self
-                                                            attribute:NSLayoutAttributeBottom
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:self.superview
-                                                            attribute:NSLayoutAttributeBottom
-                                                           multiplier:1
-                                                             constant:0];
+  NSArray *horizontal = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[subview]-0-|"
+                                                                options:NSLayoutFormatDirectionLeadingToTrailing
+                                                                metrics:nil
+                                                                  views:NSDictionaryOfVariableBindings(self)];
+  NSArray *vertical = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[subview]-0-|"
+                                                              options:NSLayoutFormatDirectionLeadingToTrailing
+                                                              metrics:nil
+                                                                views:NSDictionaryOfVariableBindings(self)];
 
-  [self addConstraints:@[leading, trailing, top, bottom]];
+  [self.superview addConstraints:horizontal];
+  [self.superview addConstraints:vertical];
 }
 
 @end
@@ -102,7 +82,7 @@ NSString * const DANGoogleSignInViewControllerRedirectUri = @"urn:ietf:wg:oauth:
     _clientId = clientId;
     _scopes = scopes;
   }
-  
+
   return self;
 }
 
