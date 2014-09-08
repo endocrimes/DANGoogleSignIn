@@ -127,7 +127,7 @@ NSString * const DANGoogleSignInViewControllerRedirectUri = @"urn:ietf:wg:oauth:
 
   // Check for the success literal
   if ([webViewTitle rangeOfString:@"Success"].location != NSNotFound) {
-    // The authorization code has been retriefed, Break the title based upon `=`
+    // The authorization code has been retrieved, Break the title based upon `=`
     NSArray *titleParts = [webViewTitle componentsSeparatedByString:@"="];
 
     // The last part should be the authorization code
@@ -135,6 +135,12 @@ NSString * const DANGoogleSignInViewControllerRedirectUri = @"urn:ietf:wg:oauth:
 
     if (self.successBlock) {
       self.successBlock(authorizationCode);
+    }
+  }
+  else {
+    if (self.failureBlock) {
+      self.failureBlock([NSError errorWithDomain:@"GoogleErrorDomain" code:1000 userInfo:nil],
+                        NSLocalizedString(@"Failed to authenticate with Google", @"Google auth failed"));
     }
   }
 }
