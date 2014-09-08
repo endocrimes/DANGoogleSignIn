@@ -28,7 +28,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "65C29A2C19B6259200FEC6A4"
+               BuildableName = "DANGoogleSignInTests.xctest"
+               BlueprintName = "DANGoogleSignInTests"
+               ReferencedContainer = "container:DANGoogleSignIn.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "65C29A2119B6259200FEC6A4"
+            BuildableName = "libDANGoogleSignIn.a"
+            BlueprintName = "DANGoogleSignIn"
+            ReferencedContainer = "container:DANGoogleSignIn.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
