@@ -12,6 +12,10 @@
 
 #import "DANGoogleSIgnInViewController.h"
 
+@interface DANGoogleSignInViewController ()
+- (NSString *)urlEncodeAndConcatenateArray:(NSArray *)anArray;
+@end
+
 SpecBegin(DANGoogleSIgnInViewController)
 
 describe(@"DANGoogleSIgnInViewController", ^{
@@ -25,6 +29,11 @@ describe(@"DANGoogleSIgnInViewController", ^{
 
     it(@"should not be nil", ^{
       expect(viewController).toNot.beNil();
+    });
+
+    it(@"should correctly concatenate and array", ^{
+      NSString *concated = [viewController urlEncodeAndConcatenateArray:@[@"hello", @"there"]];
+      expect(concated).to.equal(@"hello+there");
     });
 
     afterEach(^{

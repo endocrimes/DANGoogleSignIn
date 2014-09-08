@@ -18,7 +18,7 @@
  *  @param clientSecret The Google Client Secret
  *  @param scopes       The Required Scopes
  *
- *  @return <#return value description#>
+ *  @return A DANGoogleSignInViewController
  */
 - (instancetype)initWithClientId:(NSString *)clientId
                           scopes:(NSArray *)scopes;

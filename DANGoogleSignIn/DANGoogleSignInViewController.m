@@ -133,12 +133,16 @@ NSString * const DANGoogleSignInViewControllerRedirectUri = @"urn:ietf:wg:oauth:
     // The last part should be the authorization code
     NSString *authorizationCode = titleParts.lastObject;
 
-    NSLog(@"Authorization code is: %@", authorizationCode);
+    if (self.successBlock) {
+      self.successBlock(authorizationCode);
+    }
   }
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-
+  if (self.failureBlock) {
+    self.failureBlock(error, error.localizedDescription);
+  }
 }
 
 @end
