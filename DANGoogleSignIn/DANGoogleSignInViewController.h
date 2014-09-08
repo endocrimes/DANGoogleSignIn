@@ -21,7 +21,6 @@
  *  @return <#return value description#>
  */
 - (instancetype)initWithClientId:(NSString *)clientId
-                    clientSecret:(NSString *)clientSecret
                           scopes:(NSArray *)scopes;
 
 @property (nonatomic, copy) void (^successBlock)(NSString *authorizationToken);

@@ -20,7 +20,6 @@ describe(@"DANGoogleSIgnInViewController", ^{
   context(@"when initilized using the designated initiliser", ^{
     beforeEach(^{
       viewController = [[DANGoogleSignInViewController alloc] initWithClientId:@"hello"
-                                                                  clientSecret:@"world"
                                                                         scopes:@[]];
     });
 
