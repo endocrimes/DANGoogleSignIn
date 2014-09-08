@@ -16,10 +16,15 @@
 
 @implementation DANGoogleSignInViewController
 
+#pragma mark - Default Intializers
+
+#pragma mark - Designated Initializer
+
 - (instancetype)initWithClientId:(NSString *)clientId
                     clientSecret:(NSString *)clientSecret
                           scopes:(NSArray *)scopes {
   self = [super init];
+
   if (self) {
     _clientId = clientId;
     _clientSecret = clientSecret;

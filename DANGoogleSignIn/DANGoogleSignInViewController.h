@@ -10,6 +10,16 @@
 
 @interface DANGoogleSignInViewController : UIViewController
 
+/**
+ *  Create a new instance of DANGoogleSignInViewController. 
+ *  This is the Designated initializer.
+ *
+ *  @param clientId     The Google Client ID
+ *  @param clientSecret The Google Client Secret
+ *  @param scopes       The Required Scopes
+ *
+ *  @return <#return value description#>
+ */
 - (instancetype)initWithClientId:(NSString *)clientId
                     clientSecret:(NSString *)clientSecret
                           scopes:(NSArray *)scopes;
