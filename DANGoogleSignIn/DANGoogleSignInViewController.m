@@ -19,11 +19,12 @@ NSString * const DANGoogleSignInViewControllerRedirectUri = @"urn:ietf:wg:oauth:
 @implementation UIView (DANGSIWVCenterInSuperview)
 
 - (void)DANGSIWV_centerInSuperview {
-  NSArray *horizontal = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[subview]-0-|"
+  NSArray *horizontal = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[self]-0-|"
                                                                 options:NSLayoutFormatDirectionLeadingToTrailing
                                                                 metrics:nil
                                                                   views:NSDictionaryOfVariableBindings(self)];
-  NSArray *vertical = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[subview]-0-|"
+
+  NSArray *vertical = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[self]-0-|"
                                                               options:NSLayoutFormatDirectionLeadingToTrailing
                                                               metrics:nil
                                                                 views:NSDictionaryOfVariableBindings(self)];
