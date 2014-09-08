@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol DANGoogleSignInAuthorizationDelegate <NSObject>
-
-- (void)didRecieveAuthorizationToken:(NSString *)authorizationToken;
-
-@end
-
 @interface DANGoogleSignInWebView : UIWebView
 
 @end
