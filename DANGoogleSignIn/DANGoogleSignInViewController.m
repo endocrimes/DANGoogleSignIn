@@ -111,6 +111,57 @@ NSString * const DANGoogleSignInViewControllerRedirectUri = @"urn:ietf:wg:oauth:
   [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:targetURLString]]];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+
+  UIWebView *webView = _webView;
+  /*
+   The tales of UIWebView memory leaks are spread far and wide, with many a dev
+   debating how to properly scrub your memory of it's terrors and to properly
+   deallocate it from this world, I've lovingly (read: unfortunately) had to
+   write this method.
+
+   The first tale that has spread far and wide has said that the great UIWebView
+   does not correctly throw away is junk views and objects without first loading
+   empty content.
+   */
+  [webView loadHTMLString:@"" baseURL:nil];
+
+  /*
+   Some claim that the great UIWebView will spring a leak if content is loading
+   during deallocation.
+   */
+  [webView stopLoading];
+
+  /*
+   The third be fact and comes from our overlords themselves and goes like so:
+   "Important: Before releasing an instance of UIWebView for which you have set
+   a delegate, you must first set the UIWebView delegate property to nil before
+   disposing of the UIWebView instance. This can be done, for example, in the
+   dealloc method where you dispose of the UIWebView."
+   */
+  webView.delegate = nil;
+
+  /*
+   And the final rule be that if you're creating multiple child views for any
+   given view, and you're trying to deallocate an old child, that child is
+   pointed to by the parent view, and won't actually deallocate until that
+   parent view dissapears. This ensures that you are not creating many child
+   views that will hang around until the parent view is deallocated.
+   */
+  [webView removeFromSuperview];
+
+  webView = nil;
+}
+
+- (void)dealloc {
+  _webView = nil;
+  _scopes = nil;
+  _clientId = nil;
+  _successBlock = nil;
+  _failureBlock = nil;
+}
+
 #pragma mark - Helpers
 
 - (NSString *)urlEncodeAndConcatenateArray:(NSArray *)anArray {
@@ -122,6 +173,10 @@ NSString * const DANGoogleSignInViewControllerRedirectUri = @"urn:ietf:wg:oauth:
 #pragma mark - UIWebViewDelegate
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+  //source: http://blog.techno-barje.fr/post/2010/10/04/UIWebView-secrets-part1-memory-leaks-on-xmlhttprequest/
+  [[NSUserDefaults standardUserDefaults] setInteger:0
+                                             forKey:@"WebKitCacheModelPreferenceKey"];
+
   // Get the web pages title
   NSString *webViewTitle = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 
@@ -135,12 +190,6 @@ NSString * const DANGoogleSignInViewControllerRedirectUri = @"urn:ietf:wg:oauth:
 
     if (self.successBlock) {
       self.successBlock(authorizationCode);
-    }
-  }
-  else {
-    if (self.failureBlock) {
-      self.failureBlock([NSError errorWithDomain:@"GoogleErrorDomain" code:1000 userInfo:nil],
-                        NSLocalizedString(@"Failed to authenticate with Google", @"Google auth failed"));
     }
   }
 }
