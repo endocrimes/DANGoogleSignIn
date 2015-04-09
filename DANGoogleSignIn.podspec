@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = "0.0.1"
   s.summary          = "A quick wrapper around Google's web authentication for mobile devices."
   s.homepage         = "http://github.com/DanielTomlinson/DANGoogleSignIn"
-  s.license          = "MIT (example)"
+  s.license          = "MIT"
   s.author           = { "Daniel Tomlinson" => "dan@tomlinson.io" }
   s.social_media_url = "http://twitter.com/DanToml"
   s.platform         = :ios
