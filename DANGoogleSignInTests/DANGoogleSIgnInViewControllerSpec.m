@@ -2,7 +2,7 @@
 //  DANGoogleSIgnInViewControllerSpec.m
 //  DANGoogleSignIn
 //
-//  Created by  Danielle Lancashireon 08/09/2014.
+//  Created by Danielle Lancashire on 08/09/2014.
 //  Copyright 2014 Rocket Apps. All rights reserved.
 //
 
